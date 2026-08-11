@@ -1,0 +1,5 @@
+venv/
+__pycache__/
+*.pyc
+reports/
+allure-2.45.0/
