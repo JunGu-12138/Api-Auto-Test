@@ -23,6 +23,7 @@
 | 包管理 | pip + venv |
 
 ## 📁 项目结构
+```
 Api_Auto_Test/
 ├── common/ # 公共模块（请求封装、日志）
 │ └── request_handler.py
@@ -35,14 +36,14 @@ Api_Auto_Test/
 ├── conftest.py # pytest 全局配置
 ├── requirements.txt # Python 依赖
 └── .github/workflows/ # CI 配置
+```
 
 
 ## 🚀 快速开始
 
-1. 克隆项目并安装依赖
-
-```bash
-git clone https://github.com/你的用户名/Api-Auto-Test.git
+## 1. 克隆项目并安装依赖
+``` 
+git clone https://github.com/JunGu-12138/Api-Auto-Test.git
 cd Api-Auto-Test
 python -m venv venv
 
@@ -53,32 +54,38 @@ venv\Scripts\activate
 source venv/bin/activate
 
 pip install -r requirements.txt
+```
 
-2. 运行测试
+## 2. 运行测试
+```
 python -m pytest testcases/ --alluredir=reports -v
+```
 
-3. 查看 Allure 报告
+## 3. 查看 Allure 报告
+```
 allure serve reports
-
-4. 启动后端 API
+```
+## 4. 启动后端 API
+```
 python api_server.py
-
-5. 启动前端看板
-bash
+```
+## 5. 启动前端看板
+```
 cd ../api_auto_web
 npm install
 npm run serve
 #浏览器访问 http://localhost:8080 查看测试看板。
+```
 
-📊 前端看板
+## 📊 前端看板
 配套前端项目：api_auto_web
-基于 Vue 3 + Element Plus，提供：
-📈 测试通过率、总数、失败数卡片展示
-📋 用例详情列表（名称、状态、耗时）
-🔄 一键刷新，实时获取最新测试结果
+基于 Vue 3 + Element Plus，提供：  
+ 📈 测试通过率、总数、失败数卡片展示  
+ 📋 用例详情列表（名称、状态、耗时）  
+ 🔄 一键刷新，实时获取最新测试结果  
 
-🔄 CI/CD
-每次推送代码到 main 分支，GitHub Actions 会自动：
-安装 Python 依赖
-运行全部测试用例
-上传测试报告
+# 🔄 CI/CD
+每次推送代码到 main 分支，GitHub Actions 会自动：  
+安装 Python 依赖  
+运行全部测试用例  
+上传测试报告  
